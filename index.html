@@ -2,6 +2,12 @@
 <head>
 <title>Página Gamer</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script>
+function myFunction() {
+var element = document.body;
+element.classList.toggle("dark-mode");
+}
+</script>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
     body{ 
@@ -30,6 +36,22 @@
   font-size: 40px;
   color #0013FF;
   }*/
+
+}
+body {
+  background-color: white;
+  color: black;
+  font-size: 25px;
+  overflow: hidden;
+}
+.dark-mode {
+  background-color: #23272A;
+  color: white;
+}
+.corner{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }
 </style>
 </head>
@@ -41,11 +63,9 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<a href="minecraft/"><p style="text-align: center; font-size: 40px; color: blue;">MINECRAFT</p></a>
+
+<a href="minecraft/"><p style="text-align: center; font-size: 40px; color: blue;">Minecraft</p></a>
+<a href="legendofzelda/"><p style="text-align: center; font-size: 40px; color: green;">Mis trucos de The Legend Of Zelda</p></a>
+<div class="corner"><button onclick="myFunction()">Cambiar a modo oscuro</button></div>
 </body>
 </html>
