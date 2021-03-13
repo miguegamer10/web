@@ -6,15 +6,33 @@
     <!--If it's a phone, addapt it (and maked some code in css/addaptphone.css to be future-proof)-->
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>MINECRAFT</title>
+  <title>title</title>
   <!--Scripts and styles-->
 <script>
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
   </script>
   <style>
+    body {
+  background-color: white;
+  color: black;
+  font-size: 25px;
+  overflow: hidden;
+}
+.dark-mode {
+  background-color: #23272A;
+  color: white;
+}
+.corner{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
   </style>
 </head>
 <body>
-    <a href="https://miguegamer.ml">Volver al inicio</a>
-  <h1>MINECRAFT</h1>
+<div class="corner"><button onclick="myFunction()">Cambiar a modo oscuro</button></div>
 </body>
 </html>
