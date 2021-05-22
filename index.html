@@ -9,11 +9,20 @@
 <meta name="Inicio - Página web de MigueGamer." content="Página inicial para la página web de MigueGamer" />
 <link rel="canonical" href="https://miguegamer.ml/index.html" />
 <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>-->
-<script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script> 
+images = ['https://miguegamer.ml/contenido/fondos/bg1.jpg', 'https://miguegamer.ml/contenido/fondos/bg2.jpg', 'https://miguegamer.ml/contenido/fondos/bg3.jpg', 'https://miguegamer.ml/contenido/fondos/bg4.jpg', 'https://miguegamer.ml/contenido/fondos/bg5.png', 'https://miguegamer.ml/contenido/fondos/bg6.png', 'https://miguegamer.ml/contenido/fondos/bg7.jpg', 'https://miguegamer.ml/contenido/fondos/bg8.jpg', 'https://miguegamer.ml/contenido/fondos/bg9.png', 'https://miguegamer.ml/contenido/fondos/bg10.png', 'https://miguegamer.ml/contenido/fondos/bg11.jpg', 'https://miguegamer.ml/contenido/fondos/bg12.png', 'https://miguegamer.ml/contenido/fondos/bg13.jpg', 'https://miguegamer.ml/contenido/fondos/bg14.jpg', 'https://miguegamer.ml/contenido/fondos/bg15.jpg', 'https://miguegamer.ml/contenido/fondos/bg16.jpg', 'https://miguegamer.ml/contenido/fondos/bg17.jpg', 'https://miguegamer.ml/contenido/fondos/bg18.png', 'https://miguegamer.ml/contenido/fondos/bg19.jpg', 'https://miguegamer.ml/contenido/fondos/bg20.jpg', 'https://miguegamer.ml/contenido/fondos/bg21.jpg', 'https://miguegamer.ml/contenido/fondos/bg22.jpg', 'https://miguegamer.ml/contenido/fondos/bg23.jpg', 'https://miguegamer.ml/contenido/fondos/bg24.png'];
+
+var randomImage = Math.floor(Math.random() * 3)
+
+ $(document).ready(function() {
+  $("#container").css("background-image", "url('" + images[randomImage] + "')");
 function myFunction() {
 var element = document.body;
 element.classList.toggle("dark-mode");
 }
+})
 </script>
 <!--CSS del Side to side. Me daba pereza ponerlo en en el tag <style>
 .sidetoside{
@@ -40,13 +49,19 @@ element.classList.toggle("dark-mode");
   color #0013FF;
   }*/ -->
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-    body{ 
-    overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+html, body {height: 100%;}
+
+#container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
 }
 
 body {
-  background-color: white;
+  /*background: #ffffff;*/
   color: black;
   font-size: 25px;
   overflow: hidden;
@@ -60,9 +75,13 @@ body {
   right: 0px;
   bottom: 0px;
 }
+.sidetoside{
+  color: #ffffff;
+}
 </style>
 </head>
 <body>
+<div id="container">
 <!--No aprobado por el W3C, pero hace el avío (además mayoría de los navegadores tienen el elemento <marquee>. ver https://caniuse.com/?search=marquee |-->
 <marquee behavior="alternate" direction="right"><h1 class="sidetoside">GAMERS PROS Y CRACKS</h1></marquee>
 <br>
@@ -73,7 +92,8 @@ body {
 <br>
 
 <a href="minecraft/"><p style="text-align: center; font-size: 40px; color: blue;">Minecraft</p></a>
-<a href="legendofzelda/"><p style="text-align: center; font-size: 40px; color: green;">Mis trucos de The Legend Of Zelda</p></a>
+<a href="legendofzelda/"><p style="text-align: center; font-size: 40px; color: green;">The Legend Of Zelda</p></a>
 <div class="corner"><button onclick="myFunction()">Cambiar a modo oscuro</button></div>
+</div>
 </body>
 </html>
